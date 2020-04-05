@@ -1,0 +1,72 @@
+.nav {
+  min-width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav h1 {
+  margin-left: 17px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.guide {
+  color: #40407a;
+  font-family: Muli, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+.guide .services-list {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.guide .services-list li {
+  list-style: none;
+  font-weight: normal;
+  font-size: 37px;
+  padding: 3px;
+  cursor: pointer;
+  border-bottom: 4px solid #fff;
+}
+
+.guide .services-list li:hover {
+  border-bottom: 4px solid #40407a;
+}
+
+.content-text {
+  font-weight: 100;
+  font-size: 32px;
+  width: 70%;
+}
+
+.arrow img {
+  cursor: pointer;
+}
