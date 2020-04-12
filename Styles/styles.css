@@ -28,7 +28,6 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   position: relative;
 }
@@ -52,21 +51,223 @@
   list-style: none;
   font-weight: normal;
   font-size: 37px;
-  padding: 3px;
+  padding: 7px;
   cursor: pointer;
-  border-bottom: 4px solid #fff;
 }
 
-.guide .services-list li:hover {
-  border-bottom: 4px solid #40407a;
+.services-list li:hover {
+  color: #fff;
 }
 
 .content-text {
+  margin-top: 70px;
   font-weight: 100;
   font-size: 32px;
   width: 70%;
+  position: static;
+}
+
+.arrow {
+  margin-top: 70px;
+  position: relative;
+  background: none;
+  height: 100px;
 }
 
 .arrow img {
   cursor: pointer;
+}
+
+.arrowimg {
+  margin-top: -10px;
+  opacity: 0;
+}
+
+.medspace-section {
+  height: 120vh;
+  width: 100vw;
+  background: #3743fa;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.medspace {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.medspace-content {
+  margin-top: -10vh;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 50px;
+}
+
+.medspace-content h2 {
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: 20px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.medspace-content p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 200;
+  opacity: 0.85;
+  margin-top: 50px;
+  letter-spacing: 2px;
+}
+
+.medspace-logo {
+  width: 40%;
+  height: 40%;
+}
+
+.medspace-card img {
+  width: 95%;
+  height: 95%;
+}
+
+.case-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 20%;
+  height: 70%;
+}
+
+.case-navbar ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.case-navbar ul li a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 34px;
+  font-weight: 200;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.case-navbar ul li a div {
+  margin-right: 6px;
+}
+
+.healthplace-section {
+  height: 100vh;
+  width: 100vw;
+  background: #3dbba4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.healthplace-card {
+  margin-top: 5vh;
+  width: 60vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
+  box-shadow: 11px 11px 39px #339d8a, -11px -11px 39px #47d9be;
+}
+
+.medspace-card {
+  z-index: 997;
+  margin-top: none;
+  width: 60vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
+  background: #3743fa;
+  box-shadow: 11px 11px 39px #2831b7, -11px -11px 39px #4655ff;
+}
+
+.healthplace-title {
+  z-index: 998;
+  position: absolute;
+  height: 0vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.healthplace-title h1 {
+  font-size: 200px;
+  letter-spacing: 35px;
+  font-weight: 300;
+  position: relative;
+}
+
+.medspace-title {
+  z-index: 998;
+  position: absolute;
+  height: 0vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.medspace-title h1 {
+  font-size: 200px;
+  letter-spacing: 55px;
+  font-weight: 300;
+  position: relative;
+}
+
+.button {
+  font-style: none;
+  border: none;
+  font-weight: 400;
+  background: #3743fa;
+  font-size: 22px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0.3rem 0.3rem 0.6rem #2e38d0,
+  -0.2rem -0.2rem 0.5rem #404eff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #2e38d0,
+  inset -0.2rem -0.2rem 0.5rem #404eff;
+}
+
+.button:focus {
+  border: none;
 }

@@ -11,62 +11,240 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="Styles/styles.css" />
+  <link rel="stylesheet" href="Styles/hover.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="Styles/onepage-scroll.css">
+  <script src="Js/jquery.onepage-scroll.min.js"></script>
 </head>
 
-<body style="overflow: auto;">
-  <nav class="navbar" style="padding: 14px;display: flex; justify-content: center;">
-    <div class="nav">
-      <div class="logo">
-        <img src="assets/logo.svg" alt="" height="73.21" width="71.96" />
-        <h1 style="color: #40407a; font-family: Muli, Arial, Helvetica, sans-serif;font-weight: bold;font-size: 43px;">
-          CodeGalaxy
-        </h1>
-      </div>
-      <div class="menu">
-        <span style="width: 40px; background: #40407a; height: 2px;"></span>
-        <span style="width: 40px; background: #40407a; height: 2px; margin-top: 10px;"></span>
-      </div>
-    </div>
-  </nav>
+<style>
+  .onepage-pagination {
+    display: none;
+  }
 
-  <div class="container-fluid" style="margin-top: 25.6vh;display: flex; justify-content: space-between; align-items: flex-start;height: 60vh;">
-    <div class="content">
-      <div class="guide">
-        <p>Tente alguns de nossos serviços</p>
-        <ul class="services-list">
-          <li>
-            <a>Apps para Web</a>
-          </li>
-          <li>
-            <a>Apps Mobile</a>
-          </li>
-          <li>
-            <a>Marketing Digital</a>
-          </li>
-        </ul>
+  .menu {
+    height: 100%;
+  }
+
+  .menu span {
+    width: 30px;
+    background: #40407a;
+    height: 2px;
+  }
+
+  .menu:hover .span {
+    width: 40px;
+    animation: menu 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+
+  .hvr-sweep-to-top:before {
+    background: #40407a;
+    padding: 3px;
+  }
+
+  @keyframes menu {
+    from {
+      width: 32px;
+    }
+
+    25% {
+      width: 34px;
+    }
+
+    50% {
+      width: 36px;
+    }
+
+    75% {
+      width: 38px;
+    }
+
+    to {
+      width: 40px;
+    }
+  }
+</style>
+
+<body>
+  <div id="main" class="main">
+    <section class="section1" id="home">
+      <nav class="navbar" style="padding: 14px;display: flex; justify-content: center;">
+        <div class="nav">
+          <div class="logo" data-tilt>
+            <img src="assets/logo.svg" alt="" height="73.21" width="71.96" />
+            <h1
+              style="color: #40407a; font-family: Muli, Arial, Helvetica, sans-serif;font-weight: bold;font-size: 43px;">
+              CodeGalaxy
+            </h1>
+          </div>
+          <div class="menu">
+            <span class="span"></span>
+            <span style="width: 40px; margin-top: 10px;"></span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid"
+        style="margin-top: 22.6vh;display: flex; justify-content: space-between; align-items: flex-start;">
+        <div class="content">
+          <div class="guide">
+            <p>Tente alguns de nossos serviços</p>
+            <ul class="services-list">
+              <li>
+                <a class="hvr-sweep-to-top">Apps para Web</a>
+              </li>
+              <li>
+                <a class="hvr-sweep-to-top">Apps Mobile</a>
+              </li>
+              <li>
+                <a class="hvr-sweep-to-top">Marketing Digital</a>
+              </li>
+            </ul>
+          </div>
+          <div class="content-text">
+            <p>Nossos produtos são totalmente costumizados
+              com exclusividade para cada cliente,
+              construídos com as mais modernas tecnologias
+            </p>
+          </div>
+          <a href="#medspace" class="arrow">
+            <img class="arrowimg" src="assets/arrow.svg" alt="">
+          </a>
+        </div>
+        <img data-tilt class="astronaut" src="assets/astronaut.svg" />
       </div>
-      <div class="content-text">
-        <p>Nossos produtos são totalmente costumizados
-          com exclusividade para cada cliente,
-          construídos com as mais modernas tecnologias
-        </p>
+    </section>
+    <section class="section2" id="medspace">
+      <nav class="navbar" style="display: flex; justify-content: center;background-color: #3743fa;">
+        <div class="nav">
+          <div class="logo">
+            <a href="#home"><img style="cursor: pointer;" src="assets/arrow-left.svg" alt="" height="73.21"
+                width="71.96" /></a>
+            <h1 style="color: #fff; font-family: Muli, Arial, Helvetica, sans-serif;font-weight: bold;font-size: 43px;">
+              CodeGalaxy
+            </h1>
+          </div>
+          <div class="menu">
+            <span class="span" style="background: #fff;"></span>
+            <span style="width: 40px; margin-top: 10px;background: #fff;"></span>
+          </div>
+        </div>
+      </nav>
+      <div class="medspace-section">
+        <div class="medspace-title">
+          <h1 style="color: #000;opacity: 0;">MED SPACE</h1>
+          <h1 style="color: #000;opacity: 0.026;">MED SPACE</h1>
+          <h1 style="color: #fff;opacity: 0;">MED SPACE</h1>
+        </div>
+        <div class="medspace">
+          <div class="medspace-content">
+            <img style="z-index: 998;" class="medspace-logo" src="assets/medspaceLogo.svg" alt="">
+            <h2>Med Space</h1>
+              <p>Nossos produtos são totalmente costumizados
+                com exclusividade para cada cliente,
+                construídos com as mais modernas tecnologias
+              </p>
+              <h6 style="color: #fff;font-weight: 200;margin-top: 20px;">Conheça mais sobre este caso de uso:</h6>
+              <a style="color: #fff;" class="button">Saiba Mais ...</a>
+          </div>
+          <div class="medspace-card">
+            <img style="z-index: 998;" src="assets/doctor.svg" alt="">
+            <div class="case-navbar">
+              <ul>
+                <li>
+                  <a href="#medspace">
+                    <div style="width: 70px;height: 2px; background: #fff;"></div>
+                    <p>MS</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#healthplace">
+                    <div style="width: 70px;height: 2px; background: #fff;"></div>
+                    <p>HP</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="arrow">
-          <img src="assets/arrow.svg" alt="">
+    </section>
+    <section class="section3" id="healthplace">
+      <div class="healthplace-section">
+        <div class="healthplace-title">
+          <h1 style="color: #000;opacity: 0;">MED SPACE</h1>
+          <h1 style="color: #000;opacity: 0.026;">HEALTH PLACE</h1>
+          <h1 style="color: #fff;opacity: 0;">MED SPACE</h1>
+        </div>
+        <div class="medspace">
+          <div class="medspace-content">
+            <img class="medspace-logo" src="assets/healthplaceLogo.svg" alt="">
+            <h2>Health Place</h1>
+              <p>Nossos produtos são totalmente costumizados
+                com exclusividade para cada cliente,
+                construídos com as mais modernas tecnologias
+              </p>
+          </div>
+          <div class="healthplace-card">
+            <img src="assets/doctor.svg" alt="">
+            <div class="case-navbar">
+              <ul>
+                <li>
+                  <a href="#medspace">
+                    <div style="width: 70px;height: 2px; background: #fff;"></div>
+                    <p>MS</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#healthplace">
+                    <div style="width: 70px;height: 2px; background: #fff;"></div>
+                    <p>HP</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <img src="assets/astronaut.svg" />
+    </section>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+  <script src="Js/tilt.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.astronaut').tilt({
+        maxTilt: 10,
+        glare: true,
+      });
+    });
+
+    $(document).on('click', 'a[href^="#"]', function (event) {
+      event.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+    });
+
+    $(".main").onepage_scroll({
+      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+      animationTime: 500,             // AnimationTime let you define how long each section takes to animate
+      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+      beforeMove: function (index) { },  // This option accepts a callback function. The function will be called before the page moves.
+      afterMove: function (index) { },   // This option accepts a callback function. The function will be called after the page moves.
+      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+      keyboard: true,                  // You can activate the keyboard controls
+      responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+    });
+  </script>
+  <script src="Js/app.js"></script>
 </body>
 
 </html>
